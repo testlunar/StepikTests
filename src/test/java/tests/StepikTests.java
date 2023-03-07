@@ -23,7 +23,7 @@ public class StepikTests extends TestBase{
 
     @Test
     @Tag("Positive")
-    @DisplayName("Поиск товара по названию и проверка соответствия названия результату поиска")
+    @DisplayName("Проверка соответствия результата поиска курса по ключевому слову для поиска")
     void searchItemTests() {
 
         step("Поиск курса по названию", () -> {
@@ -53,7 +53,7 @@ public class StepikTests extends TestBase{
 
     @Test
     @Tag("Positive")
-    @DisplayName("Проверка,что количество найденных статей на странице равно 20")
+    @DisplayName("Проверка,что количество найденных статей на одной странице равно 20")
     void checkSearchResultItemsNumberTest() {
 
         step("Поиск курса по названию", () -> {
@@ -68,7 +68,7 @@ public class StepikTests extends TestBase{
 
     @Test
     @Tag("Positive")
-    @DisplayName("Проверка точного совпадения автора бесплатного курса с сертификатом после поиска")
+    @DisplayName("Проверка точного совпадения имени автора бесплатного курса с сертификатом после поиска с заданным значением")
     void searchCourseWithSertificateAndFreeTest() {
 
         step("Поиск бесплатного курса с сертификатом по слову ", () -> {
@@ -83,7 +83,7 @@ public class StepikTests extends TestBase{
 
     @Test
     @Tag("Negative")
-    @DisplayName("Проверка ошибки при неверном логине или пароле")
+    @DisplayName("Проверка тексат ошибки при неверном логине или пароле")
     void checkLoginNegative() {
 
         step("Открытие формы логина", () -> {
